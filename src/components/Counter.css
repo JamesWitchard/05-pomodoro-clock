@@ -1,0 +1,30 @@
+.counter {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.counter h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.buttons button{
+    background-color: transparent;
+    font-family: inherit;
+    color: var(--colour-text);
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.buttons label {
+    font-size: 2rem;
+}
