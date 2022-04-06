@@ -59,7 +59,6 @@ function App() {
 		setMins(Math.floor(timeInSeconds / 60));
 		setSecs(timeInSeconds % 60);
 		if (timeInSeconds < 0) {
-			console.log("BEEP BEEP BEEP")
 			audioRef.current.play();
 			setOnBreak(onBreak => !onBreak);
 		}
