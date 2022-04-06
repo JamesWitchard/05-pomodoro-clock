@@ -1,0 +1,23 @@
+.controls {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.controls a {
+    font-size: 2rem;
+    width: 30px;
+    color: var(--colour-text);
+    text-decoration: none;
+    text-align: center;
+}
+
+.controls a:hover {
+    opacity: 80%;
+}
+
+.controls a:active {
+    color: var(--colour-clock-timer);
+    opacity: 100%;
+}

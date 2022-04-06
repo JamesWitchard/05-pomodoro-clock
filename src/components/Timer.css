@@ -1,0 +1,29 @@
+.timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid var(--colour-clock-border);
+    border-radius: 2.5rem;
+    margin-top: 1rem;
+    padding: 1.5rem 3rem;
+    background-color: var(--colour-clock-background);
+}
+
+.timer label {
+    font-size: 1.5rem;
+}
+
+.timer #time-left {
+    font-size: 4rem;
+    color: var(--colour-clock-timer);
+    font-family: Digital, serif;
+}
+
+.warning {
+    color: var(--colour-red) !important;
+}
+
+.calm {
+    color: var(--colour-blue) !important;
+}

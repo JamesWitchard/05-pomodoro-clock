@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 .counter h2 {
@@ -14,7 +15,8 @@
 .buttons {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 .buttons button{
     background-color: transparent;
@@ -23,6 +25,20 @@
     border: none;
     cursor: pointer;
     font-size: 2rem;
+}
+
+.buttons label {
+    text-align-last: center;
+    width: 40px;
+}
+
+.buttons button:hover {
+    opacity: 80%;
+}
+
+.buttons button:active {
+    color: var(--colour-clock-timer);
+    opacity: 100%;
 }
 
 .buttons label {

@@ -7,9 +7,15 @@ const Counter = (props) => {
         <div className="counter">
             <h2 id={`${props.label.toString().toLowerCase()}-label`}>{props.label} Length</h2>
             <div className="buttons">
-                <button id={`${props.label.toString().toLowerCase()}-decrement`}><i className="fa fa-arrow-down" /></button>
-                <label id={`${props.label.toString().toLowerCase()}-length`}>5</label>
-                <button id={`${props.label.toString().toLowerCase()}-increment`}><i className="fa fa-arrow-up"/></button>
+                <button
+                    id={`${props.label.toString().toLowerCase()}-decrement`}
+                    onClick={() => props.dec(props.label.toString().toLowerCase())}
+                ><i className="fa fa-arrow-down" /></button>
+                <label id={`${props.label.toString().toLowerCase()}-length`}>{props.timeValue}</label>
+                <button
+                    id={`${props.label.toString().toLowerCase()}-increment`}
+                    onClick={() => props.inc(props.label.toString().toLowerCase())}
+                ><i className="fa fa-arrow-up"/></button>
             </div>
         </div>
     );
