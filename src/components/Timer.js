@@ -11,9 +11,9 @@ const Timer = (props) => {
             </label>
             <label id="time-left" className={props.timeMins < 1 ? "warning" :
                 (props.label === "Break" && props.timeMins >= props.timeTop) ? "calm" : ""}>
-                {props.timeMins < 10 ? "0" + props.timeMins : props.timeMins}
+                {props.timeMins.toString().padStart(2, "0")}
                 :
-                {props.timeSecs < 10 ? "0" + props.timeSecs : props.timeSecs}
+                {props.timeSecs.toString().padStart(2, "0")}
             </label>
         </div>
     );

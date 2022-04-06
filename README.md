@@ -7,5 +7,6 @@ begins counting down the break time.
 This is a React.js based application.
 
 ##Challenges
-
-##Known Issues
+Largest challenge was working with the way React updates the DOM and also handling a setInterval function call. [Found an 
+excellent video on the subject on Youtube](https://www.youtube.com/watch?v=sWKz9aLovjY) which helped immensely. Run into
+some issues with the FCC test suite, but I eventually solved it with some brute force.

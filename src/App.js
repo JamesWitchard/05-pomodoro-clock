@@ -12,16 +12,12 @@ function App() {
 	const [sessionTime, setSessionTime] = useState(60);
 	const [breakTime, setBreakTime] = useState(5);
 	const [timeTop, setTimeTop] = useState(Math.floor(breakTime * 0.75));
-    const [mins, setMins] = useState(onBreak ? breakTime : sessionTime);
+    const [mins, setMins] = useState(sessionTime);
     const [secs, setSecs] = useState(0);
-
-
-	const [intervalId, setIntervalId] = useState(null);
 	const [timeInSeconds, setTimeInSeconds] = useState(onBreak ? breakTime * 60 : sessionTime * 60);
 
 	const audioRef = useRef();
-
-	let id = null;
+	const id = useRef(null);
 
 	useEffect(resetDefaults, []);
 
@@ -52,10 +48,10 @@ function App() {
 
 	useEffect(() => {
 		if (timerRunning) {
-			id = window.setInterval(() => {
+			id.current = window.setInterval(() => {
 				setTimeInSeconds(timeInSeconds => timeInSeconds - 1);
 			}, 1000);
-			return () => window.clearInterval(id)
+			return () => window.clearInterval(id.current)
 		}
 	}, [timerRunning]);
 
@@ -75,7 +71,7 @@ function App() {
 
 	function pauseTimer() {
 		setTimerRunning(false);
-		window.clearInterval(id);
+		window.clearInterval(id.current);
 	}
 
 	function resetDefaults () {
@@ -83,6 +79,8 @@ function App() {
 		setOnBreak(false);
 		setSessionTime(25);
 		setBreakTime(5);
+		setMins(25);
+		setSecs(0);
 		setTimeInSeconds(onBreak ? breakTime * 60 : sessionTime * 60);
 		audioRef.current.pause();
 		audioRef.current.currentTime = 0;
