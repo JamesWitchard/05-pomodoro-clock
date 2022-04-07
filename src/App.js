@@ -124,14 +124,14 @@ function App() {
 				<h1>25 + 5 Clock</h1>
 				<div className="counters">
 					<Counter
-						label="Break"
-						timeValue={breakTime}
+						label="Session"
+						timeValue={sessionTime}
 						inc={incrementTimer}
 						dec={decrementTimer}
 					/>
 					<Counter
-						label="Session"
-						timeValue={sessionTime}
+						label="Break"
+						timeValue={breakTime}
 						inc={incrementTimer}
 						dec={decrementTimer}
 					/>
